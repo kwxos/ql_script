@@ -61,13 +61,13 @@ def qiand():
     print(responsec.text)
     data12q=json.loads(responseq.text)
     data12c=json.loads(responsec.text)
-    pmsg=f"{data12q}\n{data12c}"
+    pmsg=f"{data12q["msg"]}\n{data12c["msg"]}"
     print(pmsg)
     try:
         url = 'https://www.pushplus.plus/send/'
         data = {
             "token": pushplus_token,
-            "title": '胖乖生活',
+            "title": '复兴云签到',
             "content": pmsg
         }
         re = requests.post(url, json=data)
