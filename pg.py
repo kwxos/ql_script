@@ -710,7 +710,7 @@ class PGSH:
                 if rw == 1:
                     data[new_data["pgid"]] = {"rw": 1, "dk": 0}
                 elif dk == 1:
-                    data[new_data["pgid"]] = {"rw": 1, "dk": 1}
+                    data[new_data["pgid"]] = {"rw": 0, "dk": 0}
             with open("./pgsh.json", "w") as file:
                 json.dump(data, file)
             print("✅写入记录文件成功。")
