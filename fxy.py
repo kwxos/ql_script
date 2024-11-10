@@ -61,7 +61,7 @@ def qiand():
     print(responsec.text)
     data12q=json.loads(responseq.text)
     data12c=json.loads(responsec.text)
-    pmsg=f"{data12q["msg"]}\n{data12c["msg"]}"
+    pmsg = f"{data12q['msg']}\n{data12c['msg']}"
     print(pmsg)
     try:
         url = 'https://www.pushplus.plus/send/'
